@@ -40,6 +40,7 @@
     text-decoration: none;
     color: black;
     padding: 5px;
+    height: 25px;
 }
 
 .navigation a:hover {
@@ -77,21 +78,20 @@
 
 .search-form {
     display: flex;
-    width: 300px;
+    width: 375px;
 }
 
 .search-icon {
     background-color: lightgray;
     color: black;
+    border-radius: 15px 0 0 15px;
     width: 10%;
-    border-radius: 5px 0 0 5px;
 }
 
 .search-icon i {
     color: black;
 
 }
-
 
 .search-section input[type="text"],
 .search-icon {
@@ -103,17 +103,20 @@
     font-size: 16px;
 }
 
-.search-section input[type="text"] {
+.search-input {
+    border: 1px solid #d3d3d356;
     width: 65%;
-    border: 1px solid #ddd;
+    text-align: center;
 }
 
-.search-section input[type="text"]::placeholder {
+.search-input::placeholder {
     color: black;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .search-button {
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 15px 15px 0;
     border: none;
     color: white;
     background-color: var(--main-color);
@@ -123,35 +126,50 @@
     padding: 10px 0;
 }
 
+.search-button .icon {
+    display: none;
+}
+
+.search-button .icon i {
+    color: white;
+}
+
+.search-button .text {
+    display: block;
+}
+
 .info-text {
     display: block;
 }
 
+.header-filter {
+    margin-bottom: 0;
+    display: inline-block;
+}
 
 .filters {
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     gap: 10px;
     margin-top: 20px;
 }
 
-
 .filter-button {
     display: flex;
+    justify-content: center;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
     border-color: lightgray;
     border-radius: 35px;
     border-style: solid;
     background-color: white;
     padding: 10px;
-
+    font-weight: bold;
 }
 
 .filter-button:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-    border-radius: 35px;
+    background-color: var(--filter-bg-color);
+    border-radius: 35px; 
 }
 
 .section-title {
@@ -184,6 +202,17 @@
     width: 32%;
 }
 
+.popular-card {
+    width: 100% !important;
+    display: flex;
+    height: 146px;
+}
+
+.popular-card img {
+    width: 35% !important;
+    border-radius: 10px 0 0 10px;
+}
+
 .popular-title {
     display: flex;
     justify-content: space-between;
@@ -193,27 +222,22 @@
 .popular-cards .card {
     display: flex;
     margin-top: 33px;
+    border-radius: 10px;
 }
 
-.popular-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.popular-cards .card-content {
+.card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .popular-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    padding: 0;
+    margin: 0;
 }
 
 .popular-cards .card-subtitle {
@@ -221,46 +245,10 @@
 }
 
 .popular-cards .card-rating {
-    margin-bottom: 5px;
-}
-
-.filters {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.filter-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px 20px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.filter-btn:hover {
-    border-color: #bbb;
-}
-
-.filter-btn img.filter-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.filter-btn.selected {
-    background-color: #e8f3ff;
-    border-color: #007BFF;
+   margin: 0;
 }
 
 .info-text {
-    margin-left: 20px;
     font-size: 14px;
     color: #555;
     display: flex;
@@ -268,12 +256,12 @@
 }
 
 .info-text::before {
-    content: "ℹ️";
+    content: "ⓘ";
     margin-right: 5px;
 }
 
 
-Copy code .accommodation-section {
+.code .accommodation-section {
     margin: 20px 0;
     background-color: #fff;
     padding: 20px;
@@ -330,8 +318,7 @@ Copy code .accommodation-section {
 
 .rating {
     margin-top: 10px;
-    color: #FFD700;
-    /* Gold color for the stars */
+    color: var(--main-color);
 }
 
 .show-more {
@@ -367,7 +354,8 @@ h1 {
 
 .card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -445,7 +433,117 @@ body {
     text-decoration: underline;
 }
 
+.things-to-do-card {
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 !important;
+}
+
+.things-to-do-img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.things-to-do-card .card-title {
+    padding: 15px;
+}
+
+/*  add tablet size here */
+/* 
+    fix searc sorm size on tablet and desk
+*/
+
+
+@media (max-width: 1024px) {
+    .accommodation-and-popular {
+        flex-direction: column;
+    }
+
+    .accommodation {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .popular {
+        width: 100%;
+    }
+
+    .popular-cards {
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
+    .header-filter {
+        display: block !important;
+    }
+
+    .filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .filter-button {
+        width: 100%;
+    }
+
+    .search-button .icon {
+        display: block;
+    } 
+
+    .search-button .text {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        width: 100%;
+    }
+
+    .navigation a {
+        width: 50%;
+        text-align: center;
+        border-bottom: 2px solid lightgrey;
+    }
+
+    .navigation a:hover {
+        border-color: var(--main-color);
+        border-top: none;
+    }
+
+    .booki-header {
+        flex-direction: column;
+    }
+
+    .booki-header img {
+        height: auto;
+        width: 60px;
+        margin: auto auto 20px auto;
+    }
+
+    .popular, .accommodation {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .accommodation-and-popular {
+        flex-direction: column-reverse;
+    }
+
+    .accommodation-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-form {
+        display: flex;
+        width: 100%;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: flex-start;
