@@ -150,13 +150,10 @@
     border-style: solid;
     background-color: white;
     padding: 10px;
-
 }
 
 .filter-button:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
+    background-color: var(--filter-bg-color);
     border-radius: 35px; 
 }
 
@@ -245,12 +242,12 @@
 }
 
 .info-text::before {
-    content: "ℹ️";
+    content: "ⓘ";
     margin-right: 5px;
 }
 
 
-Copy .code .accommodation-section {
+.code .accommodation-section {
     margin: 20px 0;
     background-color: #fff;
     padding: 20px;
