@@ -40,6 +40,7 @@
     text-decoration: none;
     color: black;
     padding: 5px;
+    height: 25px;
 }
 
 .navigation a:hover {
@@ -77,14 +78,14 @@
 
 .search-form {
     display: flex;
-    width: 300px;
+    width: 375px;
 }
 
 .search-icon {
     background-color: lightgray;
     color: black;
+    border-radius: 15px 0 0 15px;
     width: 10%;
-    border-radius: 5px 0 0 5px;
 }
 
 .search-icon i {
@@ -102,20 +103,20 @@
     font-size: 16px;
 }
 
-.search-section input[type="text"] {
-    width: 65%;
-}
-
 .search-input {
     border: 1px solid #d3d3d356;
+    width: 65%;
+    text-align: center;
 }
 
-.search-section input[type="text"]::placeholder {
+.search-input::placeholder {
     color: black;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .search-button {
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 15px 15px 0;
     border: none;
     color: white;
     background-color: var(--main-color);
@@ -123,6 +124,18 @@
     font-weight: bold;
     font-size: 16px;
     padding: 10px 0;
+}
+
+.search-button .icon {
+    display: none;
+}
+
+.search-button .icon i {
+    color: white;
+}
+
+.search-button .text {
+    display: block;
 }
 
 .info-text {
@@ -143,13 +156,15 @@
 
 .filter-button {
     display: flex;
+    justify-content: center;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
     border-color: lightgray;
     border-radius: 35px;
     border-style: solid;
     background-color: white;
     padding: 10px;
+    font-weight: bold;
 }
 
 .filter-button:hover {
@@ -230,11 +245,10 @@
 }
 
 .popular-cards .card-rating {
-   margin: 0,;
+   margin: 0;
 }
 
 .info-text {
-    margin-left: 20px;
     font-size: 14px;
     color: #555;
     display: flex;
@@ -304,8 +318,7 @@
 
 .rating {
     margin-top: 10px;
-    color: #FFD700;
-    /* Gold color for the stars */
+    color: var(--main-color);
 }
 
 .show-more {
@@ -341,7 +354,8 @@ h1 {
 
 .card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -419,13 +433,49 @@ body {
     text-decoration: underline;
 }
 
+.things-to-do-card {
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 !important;
+}
+
+.things-to-do-img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.things-to-do-card .card-title {
+    padding: 15px;
+}
+
+/*  add tablet size here */
+/* 
+    fix searc sorm size on tablet and desk
+*/
+
+
+@media (max-width: 1024px) {
+    .accommodation-and-popular {
+        flex-direction: column;
+    }
+
+    .accommodation {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .popular {
+        width: 100%;
+    }
+
+    .popular-cards {
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
     .header-filter {
         display: block !important;
-    }
-
-    .search-form {
-        width: 100vw;
     }
 
     .filters {
@@ -436,6 +486,40 @@ body {
 
     .filter-button {
         width: 100%;
+    }
+
+    .search-button .icon {
+        display: block;
+    } 
+
+    .search-button .text {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        width: 100%;
+    }
+
+    .navigation a {
+        width: 50%;
+        text-align: center;
+        border-bottom: 2px solid lightgrey;
+    }
+
+    .navigation a:hover {
+        border-color: var(--main-color);
+        border-top: none;
+    }
+
+    .booki-header {
+        flex-direction: column;
+    }
+
+    .booki-header img {
+        height: auto;
+        width: 60px;
+        margin: auto auto 20px auto;
     }
 
     .popular, .accommodation {
@@ -453,6 +537,11 @@ body {
     .accommodation-grid {
         display: flex;
         flex-direction: column;
+    }
+
+    .search-form {
+        display: flex;
+        width: 100%;
     }
 
     .footer-container {
