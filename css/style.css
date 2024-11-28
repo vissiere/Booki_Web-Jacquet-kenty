@@ -264,27 +264,26 @@ body {
 }
 
 .info-icon-wrapper {
-    display: inline-flex;
-    justify-content: center;
-    height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  height: 100%;
 }
 
 .info-icon-wrapper span {
-    position: relative !important;
-    top: 20px;
+  position: relative !important;
+  top: 20px;
 }
 
 .info-icon {
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    margin-right: 5px;
-    
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .code .accommodation-section {
@@ -610,9 +609,11 @@ h1 {
     width: calc(100% - 20px);
     margin: 20px auto;
   }
+  .things-to-do-card {
+    width: 90%;
+  }
 
   .things-to-do-img-wrapper {
-    width: 320px;
     height: 141px;
     overflow: hidden;
   }
