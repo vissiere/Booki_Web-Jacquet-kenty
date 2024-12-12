@@ -492,6 +492,10 @@
       flex-direction: row;
       column-gap: 10px;
     }
+
+    .things-to-do-card {
+        width: 20%;
+    }
   }
   
   @media (max-width: 768px) {
@@ -620,8 +624,14 @@
       width: calc(100% - 20px);
       margin: 20px auto;
     }
+
+    .things-to-do {
+      width: calc(100% - 25px);
+      margin: auto;
+    }
+
     .things-to-do-card {
-      width: 90%;
+      width: 100%;
     }
   
     .things-to-do-img-wrapper {
@@ -631,6 +641,7 @@
   
     .things-to-do-img {
       object-fit: contain;
+      object-position: 1px -150px;
       width: 100%;
     }
   
